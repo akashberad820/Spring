@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- This is Our Beans - 1St way to define values -->
+
+	<bean class="com.springcore.Student" name="student1">
+		<property name="studentId">
+			<value>1111</value>
+		</property>
+		<property name="studentName">
+			<value>Akash Bhausaheb Berad</value>
+		</property>
+		<property name="studentAddress">
+			<value>Ahmendnagar,MH</value>
+		</property>
+	</bean>
+
+	<!-- 2nd bean - 2nd way to define values -->
+
+	<bean class="com.springcore.Student" name="student2">
+		<property name="studentId" value="1112" />
+		<property name="studentName" value="Shital Sanjay Wakchaure" />
+		<property name="studentAddress" value="Kopargaon,MH" />
+	</bean>
+	
+	<!-- 3rd bean - 3rd way to define using p schema -->
+	<bean class="com.springcore.Student" name="student3"  p:studentId="1113" p:studentName="Lubhavani Singh" p:studentAddress="Pune,MH" />
+
+
+</beans>  
+    
