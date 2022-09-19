@@ -8,10 +8,23 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.springcore.lifecycle.Bike" name="bike1" init-method="init" destroy-method="destroy">
-		<property name="company" value="Honda"/>
-		<property name="model" value="Hornet 2.0"/>
+<!-- 	<context:annotation-config/> -->
+	
+<!-- 	<bean class="com.springcore.lifecycle.Bike" name="bike1" -->
+<!-- 		init-method="init" destroy-method="destroy"> -->
+<!-- 		<property name="company" value="Honda" /> -->
+<!-- 		<property name="model" value="Hornet 2.0" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean class="com.springcore.lifecycle.Car" name="c1"> -->
+<!-- 		<property name="price" value="5000.95" /> -->
+<!-- 	</bean> -->
+
+	<bean class="com.springcore.lifecycle.Helmet" name="h">
+		<property name="color" value="Black"/>
 	</bean>
+	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 
 </beans>  
     
