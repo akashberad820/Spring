@@ -1,10 +1,12 @@
 package com.springcore.autowiring1;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 
 	//Place 01
+
 	private Address address;
 
 	public Address getAddress() {
@@ -12,12 +14,14 @@ public class Employee {
 	}
 
 	//Place 02
+	@Autowired
+	@Qualifier("address2")
 	public void setAddress(Address address) {
 		this.address = address;
 	}
 
 	//Place 03
-	@Autowired
+	
 	public Employee(Address address) {
 		this.address = address;
 	}

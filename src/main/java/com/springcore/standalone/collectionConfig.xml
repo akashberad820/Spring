@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<util:list list-class="java.util.LinkedList" id="list">
+		<value>7745099343</value>
+		<value>8208449595</value>
+	</util:list>
+	
+	<util:set set-class="java.util.HashSet" id="set">
+		<value>Akash</value>
+		<value>Naman</value>
+	</util:set>
+	
+	<util:map map-class="java.util.HashMap" id="map">
+		<entry	key="Java" value="2 Months"/>
+		<entry	key="Spring" value="3 Months"/>
+	</util:map>
+	
+	
+
+	<bean class="com.springcore.standalone.Employee"	name="emp" >
+		<property name="contact">
+			<ref bean="list"/>
+		</property>
+		<property name="friends">
+			<ref bean="set"/>
+		</property>
+		<property name="course">
+			<ref bean="map"/>
+		</property>
+	</bean>
+	
+</beans>  
+    
